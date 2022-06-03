@@ -1,5 +1,10 @@
 <script setup>
 import { RouterLink } from "vue-router";
+import router from "../router";
+
+const navigateToSignIn = () => {
+  router.push({ name: "signin" });
+};
 </script>
 <template>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -16,7 +21,9 @@ import { RouterLink } from "vue-router";
       </li>
     </ul>
     <div class="nav-item my-2 my-lg-0">
-      <button class="btn btn-primary">Se connecter</button>
+      <button class="btn btn-primary" @click="navigateToSignIn">
+        Se connecter
+      </button>
     </div>
   </nav>
 </template>
